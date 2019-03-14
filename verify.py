@@ -16,8 +16,8 @@ BATCH_SIZE = 1
 
 with tf.Session() as sess:
     data, model = MNIST(), MNISTModel("models/mnist", sess)
-    data, model = CIFAR(), CIFARModel("models/cifar", sess)
-    data, model = ImageNet(), InceptionModel(sess)
+    # data, model = CIFAR(), CIFARModel("models/cifar", sess)
+    # data, model = ImageNet(), InceptionModel(sess)
 
     x = tf.placeholder(tf.float32, (None, model.image_size, model.image_size, model.num_channels))
     y = model.predict(x)
